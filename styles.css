@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    --primary-mainBackground: hsl(233, 47%, 7%);
+    --primary-cardBackground: hsl(244, 38%, 16%);
+    --primary-accent: hsl(277, 64%, 61%);
+
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-mainParagraph: hsla(0, 0%, 100%, 0.75);
+    --neutral-statHeadings: hsla(0, 0%, 100%, 0.6);
+
+    --fontSize: 15px;
+    --font-family: "Inter", sans-serif;
+    --fw-regular: 400;
+    --fw-bold: 700;
+    --font-family2: "Lexend Deca", sans-serif;
+    --fw-regular2: 400;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background-color: var(--primary-mainBackground);
+    font-size: var(--fontSize);
+    font-weight: var(--fw-regular);
+}
+
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 20rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-cardBackground);
+}
+
+h1, h3 {
+    color: var(--neutral-white);
+}
+
+h1 {
+    font-weight: var(--fw-bold);
+}
+
+.accent {
+    color: var(--primary-accent);
+}
+
+p {
+    color: var(--neutral-mainParagraph);
+}
+
+.stats {
+    color: var(--neutral-statHeadings);
+    text-transform: uppercase;
+    margin-top: -0.5rem;
+    font-size: 0.7rem;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.img-container section {
+    position: absolute;
+    background-color: var(--primary-accent);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    opacity: 0.5;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.text-container {
+    padding: 2rem;
+    text-align: center;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+}
+
+@media screen and (min-width:768px) {
+
+    .card{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 55rem;
+    }
+
+    .img-container {
+        width: 50%;
+    }
+
+    .img-container img {
+        content: url(./images/image-header-desktop.jpg);
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .img-container section {
+        height: 100%;
+        border-radius: 0 0.5rem 0.5rem 0;
+    }
+
+    .text-container {
+        width: 50%;
+        text-align: start;
+    }
+
+    .desc {
+        margin-top: -1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .gridlayout {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
